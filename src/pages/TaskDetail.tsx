@@ -13,7 +13,6 @@ const TaskDetail = () => {
 
   const [newComment, setNewComment] = useState("");
 
-  // Traer tarea y comentarios
   const fetchTaskAndComments = useCallback(async () => {
     if (!taskId) return;
     setLoading(true);
