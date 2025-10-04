@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { AuthProvider } from "./contexts/AuthContext";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Projects from "./pages/Projects";
@@ -13,6 +13,7 @@ const App: FC = () => {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route
