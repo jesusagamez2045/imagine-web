@@ -1,4 +1,3 @@
-
 export interface User {
   id: number;
   name: string;
@@ -18,13 +17,14 @@ export interface Task {
   description?: string;
   assigned_to?: number;
   due_date?: string;
-  status?: "pending" | "in_progress" | "completed";
+  status?: "open" | "in_progress" | "done";
 }
 
 export interface Comment {
   id: number;
   task_id: number;
   body: string;
+  user: User;
   created_by?: string;
   created_at?: string;
 }

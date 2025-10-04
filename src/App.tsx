@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Projects from "./pages/Projects";
 import Register from "./pages/Register";
+import ProjectTasks from "./pages/ProjectTasks";
+import TaskDetail from "./pages/TaskDetail";
 
 const App: FC = () => {
   return (
@@ -21,7 +23,6 @@ const App: FC = () => {
               </PrivateRoute>
             }
           />
-          {/*           <Route path="/register" element={<Register />} />
           <Route
             path="/projects/:projectId"
             element={
@@ -37,7 +38,7 @@ const App: FC = () => {
                 <TaskDetail />
               </PrivateRoute>
             }
-          /> */}
+          />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
